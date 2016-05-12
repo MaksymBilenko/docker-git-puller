@@ -18,8 +18,7 @@ if [ -f $SECRET_KEY_LOCATION ]; then
 	ssh-keyscan $SERVER >> ~/.ssh/known_hosts
 fi
 
-git clone $OPTIONSL_ARGS $GIT_REPO
-cd `ls -d $PWD/*/`
+git clone $OPTIONSL_ARGS $GIT_REPO $PWD
 git checkout $GIT_BRANCH
 
 while true; do

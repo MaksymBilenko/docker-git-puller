@@ -8,6 +8,6 @@ VOLUME /srv/gitrepo
 
 ENV SECRET_KEY_LOCATION /run/secrets/git/id.rsa
 ENV GIT_BRANCH master
-ENV DELAY 5
+ENV DELAY 15
 
 ENTRYPOINT ["/entrypoint.sh"]
