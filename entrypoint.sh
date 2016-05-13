@@ -19,6 +19,7 @@ if [ -f $SECRET_KEY_LOCATION ]; then
 fi
 
 git clone $OPTIONSL_ARGS $GIT_REPO $PWD/repo
+cd $PWD/repo
 git checkout $GIT_BRANCH
 
 while true; do
