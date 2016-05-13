@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-cd /srv/gitrepo
+cd /srv/git
 
 if [ -z $GIT_REPO ]; then
 	echo "Pelase set GIT_REPO env variable"
@@ -18,7 +18,7 @@ if [ -f $SECRET_KEY_LOCATION ]; then
 	ssh-keyscan $SERVER >> ~/.ssh/known_hosts
 fi
 
-git clone $OPTIONSL_ARGS $GIT_REPO $PWD
+git clone $OPTIONSL_ARGS $GIT_REPO $PWD/repo
 git checkout $GIT_BRANCH
 
 while true; do

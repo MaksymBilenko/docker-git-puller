@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install git ssh -y && apt-get clean && rm -rf /tmp
 
 ADD entrypoint.sh /entrypoint.sh
 
-VOLUME /srv/gitrepo
+VOLUME /srv/git
 
 ENV SECRET_KEY_LOCATION /run/secrets/git/id.rsa
 ENV GIT_BRANCH master
